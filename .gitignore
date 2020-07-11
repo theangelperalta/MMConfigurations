@@ -1,0 +1,10 @@
+# Ignore paths that contain user-generated content.
+
+.DS_Store
+/test/*
+/archive/*
+.idea/*
+/node_modules/
+*.sw*
+.vscode/
+.json
