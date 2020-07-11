@@ -1,4 +1,4 @@
-// plugin.libsonnet
+// ribs.jsonnet
 // Created by Angel Cortez
 // 6/11/20
 
