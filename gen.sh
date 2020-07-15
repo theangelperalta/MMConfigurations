@@ -4,7 +4,7 @@
 commitCount=$(git rev-list HEAD --count)
 buildNumber=$(($commitCount + 1300000))
 
-branch=$(git name-rev --name-only HEAD)
+branch=$(git branch --show-current)
 
 if [ $branch == master ]; then
     branch="prod"
