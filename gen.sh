@@ -9,6 +9,9 @@ branch=$(git name-rev --name-only HEAD)
 if [ $branch == master ]; then
     branch="prod"
     jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet
-elif [[ $branch == "stage" || $branch == "test" ]]; then
+elif [ $branch == stage ]; then
+    jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet
+elif [ $branch == develop ]; then
+    branch="dev"
     jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet
 fi
