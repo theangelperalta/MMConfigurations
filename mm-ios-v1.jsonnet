@@ -27,7 +27,7 @@ local ribs = import './mobile/classes/ribs.jsonnet';
         }
     },
     "com.mrmarket.splash" : {
-        "enabled": true,
+        "enabled": false,
         "duration" : 7000
     }
 }
