@@ -22,7 +22,10 @@ local ribs = import './mobile/classes/ribs.jsonnet';
             },
             "com.mrmarket.stump.settings": ribs.Plugin + {
                 displayName: 'Settings',
-                orderPriority: 997
+                orderPriority: 997,
+                "websiteURL": "http://mrmarket.io",
+                "bugReportEmail": "bug@mrmarket.io",
+                "bugReportEmailMsg": "<p>You're so awesome!. Welcome to the Dev env</p>"
             }
         }
     },
