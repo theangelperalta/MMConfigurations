@@ -10,7 +10,10 @@ local ribs = import './mobile/classes/ribs.jsonnet';
         "com.mrmarket.stump.plugins" : {
             "com.mrmarket.stump.recent": ribs.Plugin + {
                 displayName: 'Recent',
-                orderPriority: 1000
+                orderPriority: 1000,
+                // Limits the number recent filings shown two pages
+                // page consisting of 10 filings
+                "pageLimit": 2
             },
             "com.mrmarket.stump.search": ribs.Plugin + {
                 displayName: 'Search',
