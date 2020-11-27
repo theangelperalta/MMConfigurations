@@ -35,5 +35,10 @@ local ribs = import './mobile/classes/ribs.jsonnet';
     "com.mrmarket.splash" : {
         "enabled": false,
         "duration" : 7000
+    },
+    "com.mrmarket.core" : {
+        "serviceURL" : "https://82yp1uicw6.execute-api.us-east-1.amazonaws.com/dev/graphql",
+        // Duration of STS session min is 900 seconds
+        "duration" : 900
     }
 }

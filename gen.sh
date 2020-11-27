@@ -8,10 +8,10 @@ branch=$(git branch --show-current)
 
 if [ $branch == master ]; then
     branch="prod"
-    jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet
+    jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet | jq -c > $1
 elif [ $branch == stage ]; then
-    jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet
+    jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet | jq -c > $1
 elif [ $branch == develop ]; then
     branch="dev"
-    jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet
+    jsonnet --ext-str env=$branch --ext-str buildNumber=$buildNumber mm-ios-v1.jsonnet | jq -c > $1
 fi
